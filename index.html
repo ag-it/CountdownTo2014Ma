@@ -1,0 +1,22 @@
+<html>
+<head>
+<script type="text/javascript" src="moment.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	function pressed() {
+		var now = moment();
+		var newYear = moment(new Date(2014, 0, 1));
+		console.log(newYear);
+		var difference = newYear.diff(now, 'days');
+		console.log(difference);
+		$("#parag").text(difference + " Days until 2014!");
+	}
+</script>
+</head>
+<body>
+<div style="text-align:center;">
+<p id="parag"></p>
+<input type="button" value="Press" onclick="pressed()" />
+</div>
+</body>
+</html>
